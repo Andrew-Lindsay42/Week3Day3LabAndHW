@@ -7,6 +7,8 @@ def index():
     return render_template('index.html', orders=orders)
 
 @app.route('/orders/<int:number>')
-def order(number):
-    number -= 1
-    return render_template('order.html', order_num = number + 1, order=orders[number])
+def show_order(number):
+    if number > 0 and number <= len(orders):
+        return render_template('order.html', order_num = number, order=orders[number - 1])
+    else:
+        return 'Order not found'

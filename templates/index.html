@@ -1,17 +1,17 @@
 <html>
     <head>
         <title>Customer Orders</title>
+        <link rel='stylesheet' href={{url_for('static', filename='/index.css')}}>
     </head>
     <body>
-        <h1>Customer Order List</h1>
+        <h1><u>Customer Order List</u></h1>
         
         {% for order in orders %}
-        <div>
+        <div id = 'orders'>
             <a href="/orders/{{orders.index(order) + 1}}">
                 <h3>Order number: {{orders.index(order) + 1}}</h3>
             </a>
             <h4>{{order.order_date}}</h4>
-            <hr>
             </p>
         </div>
         {% endfor %}

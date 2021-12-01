@@ -1,22 +1,22 @@
 <html>
     <head>
         <title>Order number {{order_num}}</title>
+        <link rel='stylesheet' href={{url_for('static', filename='/order.css')}}>
     </head>
     <body>
-        <h1>Customer Order Number: {{order_num}}</h1>
+        <h1><u>Customer Order Number: {{order_num}}</u></h1>
         
-        <div>
+        <div id = 'order_details'>
             <h4>{{order.order_date}}</h4>
             <p>
             Name: {{order.customer_name}} <br>
             {{order.shoe_brand}}<br>
             <i>{{order.shoe_description}}</i><br>
             Quantity: {{order.quantity}}<br>
-            £{{order.shoe_price}}<br>
+            Order total: £{{order.shoe_price * order.quantity}}<br>
             </p>
-            <hr>
         </div>
 
-        <a href="/orders">Back to home</a>
+        <a href='/orders'>Back to home</a>
     </body>
 </html>

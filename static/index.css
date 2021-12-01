@@ -1,0 +1,13 @@
+body > h1 {
+    text-align: center;
+}
+
+#orders {
+    text-align: center;
+    border: 2px outset hotpink;
+    margin: 1%;
+}
+
+#orders > h4 {
+    color: teal;
+}
