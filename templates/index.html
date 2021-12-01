@@ -7,14 +7,10 @@
         
         {% for order in orders %}
         <div>
-            <h3>Order number: {{orders.index(order) + 1}}</h3>
+            <a href="/orders/{{orders.index(order) + 1}}">
+                <h3>Order number: {{orders.index(order) + 1}}</h3>
+            </a>
             <h4>{{order.order_date}}</h4>
-            <p>
-            Name: {{order.customer_name}} <br>
-            {{order.shoe_brand}}<br>
-            <i>{{order.shoe_description}}</i><br>
-            Quantity: {{order.quantity}}<br>
-            £{{order.shoe_price}}<br>
             <hr>
             </p>
         </div>

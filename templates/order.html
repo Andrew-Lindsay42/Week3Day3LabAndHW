@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Order number {{order_num}}</title>
+    </head>
+    <body>
+        <h1>Customer Order Number: {{order_num}}</h1>
+        
+        <div>
+            <h4>{{order.order_date}}</h4>
+            <p>
+            Name: {{order.customer_name}} <br>
+            {{order.shoe_brand}}<br>
+            <i>{{order.shoe_description}}</i><br>
+            Quantity: {{order.quantity}}<br>
+            £{{order.shoe_price}}<br>
+            </p>
+            <hr>
+        </div>
+
+        <a href="/orders">Back to home</a>
+    </body>
+</html>
