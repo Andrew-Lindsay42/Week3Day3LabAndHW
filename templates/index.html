@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Customer Orders</title>
+    </head>
+    <body>
+        <h1>Customer Order List</h1>
+        
+        {% for order in orders %}
+        <div>
+            <h3>{{order.order_date}}:</h3>
+            <p>
+            Name: {{order.customer_name}} <br>
+            {{order.shoe_brand}}<br>
+            <i>{{order.shoe_description}}</i><br>
+            Quantity: {{order.quantity}}<br>
+            £{{order.shoe_price}}<br>
+            </p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
